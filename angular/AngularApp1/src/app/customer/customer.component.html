@@ -1,0 +1,211 @@
+<div class="border border-primary w-25 p-5 text-light bg-warning text-dark "
+
+style="margin-left: 365pt; margin-top: 20pt;">
+
+  <div>
+
+    Id is {{customer.customerId}}
+
+  </div>
+
+  <div>
+
+    Name is {{customer.customerName}}
+
+  </div>
+
+  <div>
+
+    Salary is {{customer.customerSalary}}
+
+  </div>
+
+  <div> Id is {{customer1[0].customerId}}</div>
+
+  <div> Name is {{customer1[0].customerName}}</div>
+
+  <div> Salary is {{customer1[0].customerSalary}}</div>
+
+</div>
+
+<div style="margin-left: 200pt; padding:20pt">
+
+  <h1 style="margin-left: 90pt;">Using NgIf</h1>
+
+<table class="table text-info bg-warning table-bordered w-50 table-stripped">
+
+  <thead>
+
+    <tr>
+
+     <th scope="col">Customer Id</th>
+
+     <th scope="col">Customer Name </th>
+
+     <th scope="col">Customer Salary</th>
+
+    </tr>
+
+   </thead>
+
+   <tbody>
+
+    <tr *ngFor="let c of customer1">
+
+      <td *ngIf="c.customerSalary>=45000">{{c.customerId}}</td>
+
+      <td *ngIf="c.customerSalary>=45000">{{c.customerName}}</td>
+
+      <td *ngIf="c.customerSalary>=45000">{{c.customerSalary}}</td>
+
+    </tr>
+
+  </tbody>
+
+  </table>
+
+</div>
+
+<table class="table table-dark table table-bordered w-50 table-stripped" style = " margin-left: 270pt; margin-top: 45pt;">
+
+<thead>
+
+  <tr>
+
+   <th scope="col">Customer Id</th>
+
+   <th scope="col">Customer Name </th>
+
+   <th scope="col">Customer Salary</th>
+
+  </tr>
+
+ </thead>
+
+ <tbody>
+
+  <tr *ngFor="let c of customer1">
+
+    <td>{{c.customerId}}</td>
+
+    <td>{{c.customerName}}</td>
+
+    <td>{{c.customerSalary}}</td>
+
+  </tr>
+
+</tbody>
+
+</table>
+
+<div style="margin-left: 200pt; padding:20pt">
+
+  <h1 style="margin-left: 85pt;">Using NgSwitch</h1>
+
+<table class="table text-info bg-warning table-bordered w-50 table-stripped">
+
+  <thead>
+
+    <tr>
+
+     <th scope="col">Customer Id</th>
+
+     <th scope="col">Customer Name </th>
+
+     <th scope="col">Customer Salary</th>
+
+     <th scope="col">Customer Profile</th>
+
+    </tr>
+
+   </thead>
+
+   <tbody>
+
+    <tr *ngFor="let c of customer1">
+
+      <td>{{c.customerId}}</td>
+
+      <td>{{c.customerName}}</td>
+
+      <td>{{c.customerSalary}}</td>
+
+      <td [ngSwitch]="c.customerName" class="text-dark">
+
+        <span *ngSwitchCase="'Deep Sharma'">
+
+          Manager
+
+        </span>
+
+        <span *ngSwitchCase="'Bhavya Sharma'">
+
+          Director
+
+        </span>
+
+        <span *ngSwitchCase="'Tushar sharma'">
+
+          Employee Supervisor
+
+        </span>
+
+        <span *ngSwitchCase="'Kunal sharma'">
+
+          Ast. Manager
+
+        </span>
+
+        <span *ngSwitchCase="'Aditya sharma'">
+
+          Ast. Manager
+
+        </span>
+
+        <span *ngSwitchCase="'Nitin sharma'">
+
+          Ast. Manager
+
+        </span>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+
+  </table>
+
+</div>
+
+<div>
+
+  <img src={{img_src}} width="200" height="150"/>
+
+</div>
+
+<div>
+
+  <img [src]="img_src" width={{img_width}} height={{img_height}}/>
+
+</div>
+
+<div>
+
+  <button type="button" (click)="customerClick()">Botton1</button>
+
+  <div>
+
+    <label>Enter Name</label>
+
+    <input [(ngModel)]="name">
+
+  </div>
+
+  <div>
+
+    My name is {{name}}
+
+  </div>
+
+</div>

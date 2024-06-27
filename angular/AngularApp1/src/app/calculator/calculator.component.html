@@ -1,0 +1,28 @@
+<div class="container">
+    <form class="border p-5 w-50 bg-info" style="border-radius:20pt">
+        <div>
+            <label>Enter No1</label>
+            <input type="number" [(ngModel)]="n1" [ngModelOptions]="{standalone:true}">
+        </div>
+        <div>
+            <label>Enter No2</label>
+            <input type="number" [(ngModel)]="n2" [ngModelOptions]="{standalone:true}">
+        </div>
+        <div>
+            <div class="mt-2">
+                <button type="button" class="btn btn-primary" (click)="addition()">Addition</button>
+                <button type="button" class="btn btn-primary" (click)="subtraction()" style="margin-left: 20pt;">Subtracttion</button>
+            </div>
+            <div class="mt-2">
+                <button type="button" class="btn btn-primary" (click)="multiplication()">Multiplication</button>
+                <button type="button" class="btn btn-primary" (click)="division()" style="margin-left: 20pt;">Division</button>
+            </div>
+        </div>
+        <div>
+            <div>Sum is {{n1+n2}}</div>
+            <div>Subtraction is {{n1-n2}}</div>
+            <div>Multiplication is {{n1*n2}}</div>
+            <div>Division is {{n1/n2}}</div>
+        </div>
+    </form>
+</div>

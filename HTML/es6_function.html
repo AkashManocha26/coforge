@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        ar=[1,2,3,4,5]
+
+        // for(const a of ar){
+        //     console.log(a)
+        // }
+        ar1=ar.map(function(a){
+            return a*a;
+        })
+            
+
+        for(let i=0;i<ar.length;i++){
+            document.write("<div>"+ar[i]+" map "+ar[i]+"</div>")
+        }
+
+        ar1=ar.filter(function(a){
+            return (a%2==0);
+        })
+        document.write("<div> divisible by 2 are "+ar1+"</div>")
+        sum=ar.reduce(function(a,b){
+            return a+b
+        })
+        mul=ar.reduce(function(a,b){
+            return a*b
+        })
+        alert("sum of "+ar+" is "+sum)
+        alert("multiply "+ar+" is "+mul)
+
+
+    </script>
+</body>
+</html>

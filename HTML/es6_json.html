@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: inset 10pt yellowgreen;
+            width:40%;
+            margin-left: 300pt;
+        }
+        h1{
+            margin-left: 300pt;
+        }
+        td{
+            border: solid blue;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var employee={
+            "id":1001,
+            "name":"amit kumar",
+            "dob":10-10-2009,
+            getEmployeeInfo(){
+                return "employee data "+"\nid"+employee.id+"\nname"+employee.name+"\ndob"+employee.dob
+            }
+        }
+        var customers=[
+            {
+                "id":1001,
+                "name":"amit kumar",
+                salary:12000
+        },
+            {
+                "id":1002,
+                    "name":"sumit kumar",
+                    salary:16000
+            },
+            {
+                "id":1003,
+                "name":"prem kumar",
+                salary:9000
+            },
+            {
+                "id":1004,
+                "name":"suresh kumar",
+                salary:60000
+            }
+    ]
+    function getEmployeeInfo1(){
+            return "employee data "+"\nid"+employee.id+"\nname"+employee.name+"\ndob"+employee.dob
+        }
+    document.write("<h1>Employee data</h1>")
+    document.write("id is "+employee.id)
+    document.write("<br>name is "+employee.name)
+    document.write("<br>salary is "+employee.salary)
+
+    document.write("<p><p>json is "+JSON.stringify(employee))
+    document.write("employee data "+employee.getEmployeeInfo)
+    console.log(JSON.stringify(employee))
+   
+    document.write("<h1>Customers data</h1>")
+    document.write("<p><p>json is "+JSON.stringify(customers))
+    document.write("<p><p>json is "+JSON.stringify(customers))
+    document.write("<table>")
+
+    for(const cust of customers){
+        document.write("<tr><td>"+cust.id+"</td><td>"+cust.name+"</td><td>"+cust.salary+"</td></tr>")
+    }
+    document.write("</table>")
+    alert(getEmployeeInfo1())
+
+    </script>
+</body>
+</html>

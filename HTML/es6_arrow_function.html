@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function addition(a,b){
+            return a+b
+        }
+        sum=function(a,b){
+            return a+b
+        }
+        sum1=(a,b)=>a+b
+
+        alert(sum1(111,222))
+
+        ar=[1,2,3,4,5]
+
+
+        ar1=ar.map(a=>a*a)
+        alert(ar+"\n "+ar1)
+        sum=ar.reduce((a,b)=>a+b)
+        alert("sum of "+ar+"\n is "+sum)
+
+        city=["delhi","mumbai","kolkata","chennai"]
+        console.log("unsorted "+city)
+        city.sort()
+        console.log("sorted "+city)
+
+        salary=[25000,12000,9000,45000,30000]
+        console.log("unsorted salary "+salary)
+        salary.sort()
+        console.log("sorted salary "+salary)
+
+        salary.sort(function(a,b){
+            return a-b
+        })
+        console.log("sorted salary in ascending order "+salary)
+        salary.sort((a,b)=>b-a)
+        console.log("sorted salary in decending order "+salary)
+
+    </script>
+</body>
+</html>

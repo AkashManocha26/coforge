@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            static country="India"
+            constructor(id,name,salary){
+                this.id=id;
+                this.name=name;
+                this.salary=salary;
+            }
+            employeeInfo(){
+                return "employee data "+
+                "\nid"+this.id+
+                "\nname"+this.name+
+                "\nsalary"+this.salary
+            }
+            show(){
+                //super.show()
+                console.log("this is show method of Employee class")
+            }
+        }
+        emp1=new Employee(1001,"Ram Kumar",20000)
+        alert(emp1.employeeInfo())
+        console.info(emp1.employeeInfo())
+
+        class Manager extends Employee{
+            constructor(id,name,salary,location,pf){
+                super(id,name,salary);
+                this.location=location
+                this.pf=pf
+            }
+        }
+        manager1=new Manager(1009,"Pawan Kumar",45000,"New Delhi",0.05)
+        alert("manager data "+manager1.employeeInfo()+"\nlocation "+manager1.location+"\npf"+manager1.pf)
+        console.log("manager data "+manager1.employeeInfo()+"\nlocation "+manager1.location+"\npf"+manager1.pf)
+
+        alert("Country is "+Employee.country)
+    </script>
+</body>
+</html>
