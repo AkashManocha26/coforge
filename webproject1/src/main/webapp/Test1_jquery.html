@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+    crossorigin="anonymous"></script>
+   <script>
+       $(document).ready(function(){
+       alert("hello world")
+        })
+       $(function(){
+           alert("hello world to jquery")
+       })
+       $(function(){
+           alert($('#id1').text())
+           $('#id1').text('we all are indian')
+       })
+       $(function(){
+        $('#id2').click(function(){
+            alert('clicked..')
+            $('#id2').html('<h2>we will learn servlet and jsp</h2>')
+            })
+        })
+        $(function(){
+            $('#id3').click(function(){
+                alert('Button clicked..')
+            })
+        })
+       
+   </script>
+</head>
+<body>
+    <div id="id1" style="border: solid;padding: 20pt;font-size: large;margin-left: 200pt;width: 30%;margin-bottom: 5px;">
+        Gretting to jquery
+    </div>
+    <div id="id2" style="border: solid;padding: 20pt;font-size: large;margin-left: 200pt;width: 30%;margin-bottom: 5px;">
+        we are learning jquery
+    </div>
+    <button id="id3">
+        Button 
+    </button>
+ 
+
+</body>
+</html>

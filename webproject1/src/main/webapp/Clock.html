@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function alarm() {
+        alert("alarm is ringing ");
+      }
+      document.write("alarm will ring after 5 second");
+      setTimeout(alarm, 4000);
+
+      function consoleClock() {
+        document.getElementById("c").innerHTML =
+          "<span style='color:blue; font-size:20pt;margin-left:270pt; border:inset 20pt'>" +
+          new Date().toLocaleTimeString();
+      }
+      setInterval(consoleClock, 1000);
+    </script>
+    <h1>Clock</h1>
+    <div id="c"></div>
+  </body>
+</html>
